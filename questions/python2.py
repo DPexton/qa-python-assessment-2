@@ -148,10 +148,16 @@ def four(string1, string2):
 
 def five():
     from random import randrange
-    num = 100 
-    num += randrange(50) * 2
+    my_list = []
+    for i in range(5): 
+   
+        num = 100 
+        num += randrange(50) * 2
+        my_list.append(num)
 
-    return 
+    return my_list 
+
+print(five())
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
