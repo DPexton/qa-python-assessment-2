@@ -31,7 +31,12 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    a = ''
+    for character in string:
+        a= a + character + character + character
+    return a
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +57,18 @@ def one(string):
 
 
 def two(number):
-    return False
+    if number == 1:
+     return False
+    
+    for x in range(2,int(number /2)):
+        if number %x == 0:
+            return False
+            break
+
+    else:
+        return True
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +88,12 @@ def two(number):
 
 
 def three(a):
-    return 1
+	n1 = int( "%s" % a )
+	n2 = int( "%s%s" % (a,a) )
+	n3 = int( "%s%s%s" % (a,a,a) )
+	n4 = int( "%s%s%s%s" % (a,a,a,a) )
+	
+	return (n1 + n2 + n3 + n4)
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,8 +125,10 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
-
+    if len(string1) == len(string2):
+        return zip(string1, string2)
+    else:
+        return False
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
     # <QUESTION 5>
@@ -124,7 +147,11 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    from random import randrange
+    num = 100 
+    num += randrange(50) * 2
+
+    return 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +173,12 @@ def five():
 
 
 def six(string):
-    return False
+    length = len(string)
+    chars = string[length -2:].lower()
+    if chars == "py":
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -214,7 +246,20 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-    return False
+    n1 = len(string1)
+    n2 = len(string2)
+    count = 0
+
+    for i in range(0,n1):
+        if string1[i] == string2[i]:
+            count += 1
+    
+    if count == len(string2):
+        return True
+    
+    else: 
+        return False
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
